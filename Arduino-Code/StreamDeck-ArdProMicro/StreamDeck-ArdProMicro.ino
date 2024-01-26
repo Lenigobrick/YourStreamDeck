@@ -15,6 +15,7 @@
 #define BUTTON_3_PIN 7
 #define BUTTON_4_PIN 8
 #define BUTTON_5_PIN 9
+#define BUTTON_6_PIN 10
 
 // Variable(s)
 int old_encoder = 0;
@@ -30,6 +31,7 @@ void setup() {
   pinMode(BUTTON_3_PIN, INPUT_PULLUP);
   pinMode(BUTTON_4_PIN, INPUT_PULLUP);
   pinMode(BUTTON_5_PIN, INPUT_PULLUP);
+  pinMode(BUTTON_6_PIN, INPUT_PULLUP);
 }
 
 // Loop
@@ -94,6 +96,15 @@ void loop() {
     Keyboard.write('C');
     Serial.println("Button 5 pressed");
     while (digitalRead(BUTTON_5_PIN) == 0){
+      delay(100);
+    }
+    delay(50);
+  }
+
+  if (digitalRead(BUTTON_6_PIN) == 0){ // button
+    Keyboard.write('D');
+    Serial.println("Button 6 pressed");
+    while (digitalRead(BUTTON_6_PIN) == 0){
       delay(100);
     }
     delay(50);
