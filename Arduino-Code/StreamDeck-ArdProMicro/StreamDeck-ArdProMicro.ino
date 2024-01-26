@@ -11,6 +11,10 @@
 
 //Buttons Pins
 #define BUTTON_1_PIN 5
+#define BUTTON_2_PIN 6
+#define BUTTON_3_PIN 7
+#define BUTTON_4_PIN 8
+#define BUTTON_5_PIN 9
 
 // Variable(s)
 int old_encoder = 0;
@@ -22,6 +26,10 @@ void setup() {
   Serial.begin(9600);
   pinMode(SW_PIN, INPUT_PULLUP);
   pinMode(BUTTON_1_PIN, INPUT_PULLUP);
+  pinMode(BUTTON_2_PIN, INPUT_PULLUP);
+  pinMode(BUTTON_3_PIN, INPUT_PULLUP);
+  pinMode(BUTTON_4_PIN, INPUT_PULLUP);
+  pinMode(BUTTON_5_PIN, INPUT_PULLUP);
 }
 
 // Loop
@@ -45,13 +53,51 @@ void loop() {
     Consumer.write(MEDIA_VOLUME_MUTE); // Mute/Unmute
     delay(500);
   }
-  if (digitalRead(BUTTON_1_PIN) == 0){
+
+  if (digitalRead(BUTTON_1_PIN) == 0){ // button
     Keyboard.write('Y');
+    Serial.println("Button 1 pressed");
     while (digitalRead(BUTTON_1_PIN) == 0){
       delay(100);
     }
     delay(50);
   }
 
-  delay(150);
+  if (digitalRead(BUTTON_2_PIN) == 0){ // button
+    Keyboard.write('Z');
+    Serial.println("Button 2 pressed");
+    while (digitalRead(BUTTON_2_PIN) == 0){
+      delay(100);
+    }
+    delay(50);
+  }
+
+  if (digitalRead(BUTTON_3_PIN) == 0){ // button
+    Keyboard.write('A');
+    Serial.println("Button 3 pressed");
+    while (digitalRead(BUTTON_3_PIN) == 0){
+      delay(100);
+    }
+    delay(50);
+  }
+
+  if (digitalRead(BUTTON_4_PIN) == 0){ // button
+    Keyboard.write('B');
+    Serial.println("Button 4 pressed");
+    while (digitalRead(BUTTON_4_PIN) == 0){
+      delay(100);
+    }
+    delay(50);
+  }
+
+  if (digitalRead(BUTTON_5_PIN) == 0){ // button
+    Keyboard.write('C');
+    Serial.println("Button 5 pressed");
+    while (digitalRead(BUTTON_5_PIN) == 0){
+      delay(100);
+    }
+    delay(50);
+  }
+
+  delay(100);
 }
