@@ -9,6 +9,9 @@
 #define CLK_PIN 4
 #define SW_PIN 2
 
+//Buttons Pins
+#define BUTTON_1_PIN 5
+
 // Variable(s)
 int old_encoder = 0;
 
@@ -18,13 +21,14 @@ Encoder myEncoder(DT_PIN, CLK_PIN);
 void setup() {
   Serial.begin(9600);
   pinMode(SW_PIN, INPUT_PULLUP);
+  pinMode(BUTTON_1_PIN, INPUT_PULLUP);
 }
 
 // Loop
 void loop() {
   long encoderValue = myEncoder.read();
 
-  Serial.println(encoderValue);
+  //Serial.println(encoderValue);
 
   if (encoderValue != old_encoder){
     if (encoderValue < old_encoder){
@@ -41,6 +45,13 @@ void loop() {
     Consumer.write(MEDIA_VOLUME_MUTE); // Mute/Unmute
     delay(500);
   }
+  if (digitalRead(BUTTON_1_PIN) == 0){
+    Keyboard.write('Y');
+    while (digitalRead(BUTTON_1_PIN) == 0){
+      delay(100);
+    }
+    delay(50);
+  }
 
-  delay(200);
+  delay(150);
 }
