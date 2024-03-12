@@ -5,4 +5,5 @@
 - Arduino Pro-Micro x1
 - Wires (for test on breadboard) x20
 - Mechanical switches x6
+- Keys caps
 - Case x1
