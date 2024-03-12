@@ -7,3 +7,6 @@
 - Mechanical switches x6 [Aliexpress](https://s.click.aliexpress.com/e/_DFiIKN7) or [Amazon](https://www.amazon.fr/Cherry-Commutateurs-Clavier-m%C3%A9caniques-Remplacement/dp/B08SK47VDX/)
 - Keys caps x6 [Aliexpress](https://s.click.aliexpress.com/e/_DmgJcUt)
 - Case x1
+
+> [!TIP]
+> Personally, I bought everything on Aliexpress.
