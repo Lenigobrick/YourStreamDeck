@@ -15,7 +15,9 @@
 #define BUTTON_3_PIN 7
 #define BUTTON_4_PIN 8
 #define BUTTON_5_PIN 9
-#define BUTTON_6_PIN 10
+#define BUTTON_6_PIN 18
+const int brocheLED = 10;
+int IntLum = 60;
 
 // Variable(s)
 int old_encoder = 0;
@@ -32,6 +34,7 @@ void setup() {
   pinMode(BUTTON_4_PIN, INPUT_PULLUP);
   pinMode(BUTTON_5_PIN, INPUT_PULLUP);
   pinMode(BUTTON_6_PIN, INPUT_PULLUP);
+  pinMode(brocheLED, OUTPUT);
 }
 
 // Loop
@@ -58,54 +61,96 @@ void loop() {
 
   if (digitalRead(BUTTON_1_PIN) == 0){ // button
     Keyboard.write('Y');
+    IntLum = 60;
+    analogWrite(brocheLED, IntLum);
     Serial.println("Button 1 pressed");
     while (digitalRead(BUTTON_1_PIN) == 0){
       delay(100);
+    }
+    for (int i = 0; i < 12; i++) {
+      analogWrite(brocheLED, IntLum);
+      delay(50);
+      IntLum = IntLum - 5;
     }
     delay(50);
   }
 
   if (digitalRead(BUTTON_2_PIN) == 0){ // button
     Keyboard.write('Z');
+    IntLum = 60;
+    analogWrite(brocheLED, IntLum);
     Serial.println("Button 2 pressed");
     while (digitalRead(BUTTON_2_PIN) == 0){
       delay(100);
+    }
+    for (int i = 0; i < 12; i++) {
+      analogWrite(brocheLED, IntLum);
+      delay(50);
+      IntLum = IntLum - 5;
     }
     delay(50);
   }
 
   if (digitalRead(BUTTON_3_PIN) == 0){ // button
     Keyboard.write('A');
+    IntLum = 60;
+    analogWrite(brocheLED, IntLum);
     Serial.println("Button 3 pressed");
     while (digitalRead(BUTTON_3_PIN) == 0){
       delay(100);
+    }
+    for (int i = 0; i < 12; i++) {
+      analogWrite(brocheLED, IntLum);
+      delay(50);
+      IntLum = IntLum - 5;
     }
     delay(50);
   }
 
   if (digitalRead(BUTTON_4_PIN) == 0){ // button
     Keyboard.write('B');
+    IntLum = 60;
+    analogWrite(brocheLED, IntLum);
     Serial.println("Button 4 pressed");
     while (digitalRead(BUTTON_4_PIN) == 0){
       delay(100);
+    }
+    for (int i = 0; i < 12; i++) {
+      analogWrite(brocheLED, IntLum);
+      delay(50);
+      IntLum = IntLum - 5;
     }
     delay(50);
   }
 
   if (digitalRead(BUTTON_5_PIN) == 0){ // button
     Keyboard.write('C');
+    IntLum = 60;
+    analogWrite(brocheLED, IntLum);
     Serial.println("Button 5 pressed");
     while (digitalRead(BUTTON_5_PIN) == 0){
       delay(100);
+    }
+    for (int i = 0; i < 12; i++) {
+      analogWrite(brocheLED, IntLum);
+      delay(50);
+      IntLum = IntLum - 5;
     }
     delay(50);
   }
 
   if (digitalRead(BUTTON_6_PIN) == 0){ // button
     Keyboard.write('D');
+    IntLum = 60;
+    analogWrite(brocheLED, IntLum);
     Serial.println("Button 6 pressed");
     while (digitalRead(BUTTON_6_PIN) == 0){
       delay(100);
+    }
+    for (int i = 0; i < 12; i++) {
+      analogWrite(brocheLED, IntLum);
+      delay(50);
+      IntLum = IntLum - 5;
     }
     delay(50);
   }
