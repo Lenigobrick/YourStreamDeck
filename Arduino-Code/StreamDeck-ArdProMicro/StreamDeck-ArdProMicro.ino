@@ -73,6 +73,7 @@ void loop() {
       IntLum = IntLum - 5;
     }
     delay(50);
+    analogWrite(brocheLED, 0);
   }
 
   if (digitalRead(BUTTON_2_PIN) == 0){ // button
@@ -89,6 +90,7 @@ void loop() {
       IntLum = IntLum - 5;
     }
     delay(50);
+    analogWrite(brocheLED, 0);
   }
 
   if (digitalRead(BUTTON_3_PIN) == 0){ // button
@@ -105,6 +107,7 @@ void loop() {
       IntLum = IntLum - 5;
     }
     delay(50);
+    analogWrite(brocheLED, 0);
   }
 
   if (digitalRead(BUTTON_4_PIN) == 0){ // button
@@ -121,6 +124,7 @@ void loop() {
       IntLum = IntLum - 5;
     }
     delay(50);
+    analogWrite(brocheLED, 0);
   }
 
   if (digitalRead(BUTTON_5_PIN) == 0){ // button
@@ -137,6 +141,7 @@ void loop() {
       IntLum = IntLum - 5;
     }
     delay(50);
+    analogWrite(brocheLED, 0);
   }
 
   if (digitalRead(BUTTON_6_PIN) == 0){ // button
@@ -153,6 +158,7 @@ void loop() {
       IntLum = IntLum - 5;
     }
     delay(50);
+    analogWrite(brocheLED, 0);
   }
 
   delay(100);
