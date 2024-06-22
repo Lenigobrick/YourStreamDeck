@@ -9,4 +9,4 @@
 - Case x1
 
 > [!TIP]
-> Personally, I bought everything on Aliexpress. So all Amazon stuffs have never been ordered and tested by my me :)
+> Personally, I bought everything on Aliexpress. So all Amazon stuffs have never been ordered and tested by me :)
